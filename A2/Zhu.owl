@@ -1,0 +1,1452 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#"
+     xml:base="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:UniversityLibrary="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#AskedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#AskedAt">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#HelpDesk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudiedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudiedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isStudied"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#WorkedAt -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#WorkedAt">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isWorked"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#HelpDesk"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBooked -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBooked">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBooked"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBorrowed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBorrowed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBorrowed"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+        <rdfs:comment>Determine how many resources one person borrowed.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBooked -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBooked">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBooked"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBorrowed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBorrowed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBorrowed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumUsed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumUsed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasUsed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasUsed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasUsed">
+        <owl:inverseOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isUsed"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Electronic"/>
+        <rdfs:comment>Determine how many computers or printers a person can use. Restriction: one person can only use one computer or printer.</rdfs:comment>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBooked -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBooked">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBorrowed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBorrowed">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isStudied -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isStudied">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isUsed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isUsed">
+        <rdfs:subPropertyOf rdf:resource="http://www.w3.org/2002/07/owl#topObjectProperty"/>
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Electronic"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isWorked -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isWorked">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#HelpDesk"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#numIsUsed -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#numIsUsed">
+        <rdfs:subPropertyOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isUsed"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#DeskID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#DeskID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ElectronicID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ElectronicID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Electronic"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ResourcesAuthor -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ResourcesAuthor">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ResourcesID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ResourcesID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ResourcesName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ResourcesName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#RoomID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#RoomID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudentID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudentID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StuffID -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StuffID">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#firstName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#firstName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+        <rdfs:comment>first name of a person</rdfs:comment>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#lastName -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#lastName">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#AcademicBooks -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#AcademicBooks">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Non-Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ArchivalCollections -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ArchivalCollections">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Area -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Area">
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Articles -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Articles">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Biography -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Biography">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Non-Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Books -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Books">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#CitingSources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#CitingSources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ClimateMap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ClimateMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Maps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Electronic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Conference -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Conference">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Copyright -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Copyright">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isStudied"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">4</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>4 desks in total.</rdfs:comment>
+        <rdfs:comment>Each desk has maximum 4 students.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#EconomicMap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#EconomicMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Maps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Electronic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Electronic">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Area"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isUsed"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#numIsUsed"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Books"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#GroupStudyRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#GroupStudyRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isStudied"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Each room is booked by maximum one student and each room can have maximum 5 students studied at.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Guides -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Guides">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Non-Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#HelpDesk -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#HelpDesk">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Area"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isWorked"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Horror -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Horror">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Journalism -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Journalism">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Non-Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Maps -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Maps">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Mystery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Mystery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Non-Fiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Non-Fiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Books"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#PhysicalMap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#PhysicalMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Maps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#PoliticalMap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#PoliticalMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Maps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Electronic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Area"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBorrowed"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBorrowed"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Rommance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Rommance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBooked"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isBooked"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>There are 5 rooms. 3 are slient study room and 2 are group study room.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ScienceFiction -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ScienceFiction">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Self-improvement -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Self-improvement">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Non-Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#SlientStudyRoom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#SlientStudyRoom">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isStudied"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>Each room is booked by maximum one student and each room can have maximum 1 students studied at.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Standards -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Standards">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#WorkedAt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#HelpDesk"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudiedAt"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBooked"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBorrowed"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#AskedAt"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#HelpDesk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudiedAt"/>
+                <owl:qualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:qualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBooked"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#GroupStudyRoom"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#SlientStudyRoom"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBooked"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ClimateMap"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBooked"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">2</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBooked"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">3</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Books"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBorrowed"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumUsed"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A student can borrow maximum 5 resources(max 3 books, max 2 fictions and  climate maps).
+A student can book maximum 1 room(Group study room or Slient study room) and use maximum 1 electronic(computer or printer). A student can study at StudyArea(room or desk). They can ask questions at help desk.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Area"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#isStudied"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Person"/>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudiedAt"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#StudyArea"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Class>
+                <owl:complementOf>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBooked"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room"/>
+                    </owl:Restriction>
+                </owl:complementOf>
+            </owl:Class>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasBorrowed"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasUsed"/>
+                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Electronic"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#WorkedAt"/>
+                <owl:allValuesFrom rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#HelpDesk"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumBorrowed"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">5</owl:maxQualifiedCardinality>
+                <owl:onClass rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#hasNumUsed"/>
+                <owl:maxQualifiedCardinality rdf:datatype="http://www.w3.org/2001/XMLSchema#nonNegativeInteger">1</owl:maxQualifiedCardinality>
+                <owl:onClass>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer"/>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:onClass>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:comment>A stuff works at the help desk to allow students ask questions about the library, and return or borrow a resouces. They are not allowed to book a study room or studied at any study areas. They can borrow resources and use electronics.</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Suspense -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Suspense">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ThematicMap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ThematicMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Maps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Theses -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Theses">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#TopographicMap -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#TopographicMap">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Maps"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Travelogues -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Travelogues">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Non-Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Western -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Western">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#YoungAdult -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#YoungAdult">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Women&apos;s -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Women&apos;s">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Fiction"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer"/>
+        <ElectronicID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">001</ElectronicID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Computer"/>
+        <ElectronicID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">002</ElectronicID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk"/>
+        <DeskID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">001</DeskID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk"/>
+        <DeskID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">002</DeskID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk"/>
+        <DeskID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">003</DeskID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Desk"/>
+        <DeskID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">004</DeskID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer"/>
+        <ElectronicID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">003</ElectronicID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Printer"/>
+        <ElectronicID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">004</ElectronicID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ArchivalCollections"/>
+        <ResourcesAuthor>Smithian</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">431234</ResourcesID>
+        <ResourcesName>Smithsonian&apos;s Field Book</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Articles"/>
+        <ResourcesAuthor>Ashile Qiue</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">410928</ResourcesID>
+        <ResourcesName>The Partical in English Grammar</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Articles"/>
+        <ResourcesAuthor>Amiee Oster</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">412092</ResourcesID>
+        <ResourcesName>What is Interjection?</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Horror"/>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">124985</ResourcesID>
+        <ResourcesName>Dark Lover</ResourcesName>
+        <ResourcesName>J.R. Ward</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources06">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Mystery"/>
+        <ResourcesAuthor>Kristen Ashley</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">287509</ResourcesID>
+        <ResourcesName>Mystery Man</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources07 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources07">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Rommance"/>
+        <ResourcesAuthor>Q.R. Guo</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">349382</ResourcesID>
+        <ResourcesName>The Lover</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources08 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources08">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ScienceFiction"/>
+        <ResourcesAuthor>Ken Liu</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">431209</ResourcesID>
+        <ResourcesName>Fantasy &amp; ScienceFiction</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources09 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources09">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Suspense"/>
+        <ResourcesAuthor>Karan Rose</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">431293</ResourcesID>
+        <ResourcesName>Don&apos;t Tell</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources10 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources10">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Western"/>
+        <ResourcesAuthor>Erich Maria Remarquem, A.W. Wheen</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109384</ResourcesID>
+        <ResourcesName>All Quiet on the Western Front</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources11 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources11">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Women&apos;s"/>
+        <ResourcesAuthor>Louisa May Alcott</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">019853</ResourcesID>
+        <ResourcesName>Little Women</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources12 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources12">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#YoungAdult"/>
+        <ResourcesAuthor>Gena Showalter</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">019845</ResourcesID>
+        <ResourcesName>Red Handed</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources13 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources13">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#AcademicBooks"/>
+        <ResourcesAuthor>James F. Kurose</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">109853</ResourcesID>
+        <ResourcesName>Computer Networks</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources14 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources14">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Biography"/>
+        <ResourcesAuthor>Hayden Herrera</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">089327</ResourcesID>
+        <ResourcesName>Frida: A biography of Frida Kahlo</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources15 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources15">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Guides"/>
+        <ResourcesAuthor>Douglas Adams</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">089327</ResourcesID>
+        <ResourcesName>The Hitchhiker&apos;s Guide to the Galaxy</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources16 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources16">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Journalism"/>
+        <ResourcesAuthor>William Bonner</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">084392</ResourcesID>
+        <ResourcesName>Jornal Nacional: Modo De Fazer</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources17 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources17">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Self-improvement"/>
+        <ResourcesAuthor>Self Improvement</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">873208</ResourcesID>
+        <ResourcesName>How To Free Yourself From Bad Habits, Forever!</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources18 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources18">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Travelogues"/>
+        <ResourcesAuthor>Lucy Knisley</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">099832</ResourcesID>
+        <ResourcesName>Displacement: A Travelogue</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources19 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources19">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#CitingSources"/>
+        <ResourcesAuthor>Suzy Rabbat</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">955555</ResourcesID>
+        <ResourcesName>Learning to Use the Copyright Page</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources20 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources20">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Conference"/>
+        <ResourcesAuthor>Farid Al-Din Attar</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">977777</ResourcesID>
+        <ResourcesName>The Conference of the Birds</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources21 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources21">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Copyright"/>
+        <ResourcesAuthor>Lori Lesko</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">677777</ResourcesID>
+        <ResourcesName>Copyright</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources22 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources22">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ClimateMap"/>
+        <ResourcesAuthor>Ian F. Mahaney</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">122222</ResourcesID>
+        <ResourcesName>Climate Maps</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources23 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources23">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#EconomicMap"/>
+        <ResourcesAuthor>Jim O&apos;Neill</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">233333</ResourcesID>
+        <ResourcesName>The Growth Map: Economic Opportunity in the Brics and Beyond</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources24 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources24">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#PhysicalMap"/>
+        <ResourcesAuthor>Ellen Rodger</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">173923</ResourcesID>
+        <ResourcesName>Physical Maps</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources25 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources25">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#PoliticalMap"/>
+        <ResourcesAuthor>A.A. Pubishing</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">983273</ResourcesID>
+        <ResourcesName>AA The Political Map of the World</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources26 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources26">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ThematicMap"/>
+        <ResourcesAuthor>Borden D. Dent</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">874320</ResourcesID>
+        <ResourcesName>Principles Of Thematic Map Design</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources27 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources27">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#TopographicMap"/>
+        <ResourcesAuthor>Ian F. Mahaney</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">932732</ResourcesID>
+        <ResourcesName>Reading Topographic Maps</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources28 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources28">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Standards"/>
+        <ResourcesAuthor>Alice Sturgis</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">837292</ResourcesID>
+        <ResourcesName>The Standard Code of Parliamentary Procedure</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources29 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources29">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Theses"/>
+        <ResourcesAuthor>Martin Luther</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">98382</ResourcesID>
+        <ResourcesName>Martin Luther&apos;s Ninety-Five Theses</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources30 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Resources30">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#ClimateMap"/>
+        <ResourcesAuthor>Rebecca E. Hirsch</ResourcesAuthor>
+        <ResourcesID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">983282</ResourcesID>
+        <ResourcesName>Using Climate Maps</ResourcesName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#GroupStudyRoom"/>
+        <RoomID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">001</RoomID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#GroupStudyRoom"/>
+        <RoomID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">002</RoomID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#SlientStudyRoom"/>
+        <RoomID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">003</RoomID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#SlientStudyRoom"/>
+        <RoomID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">004</RoomID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Room05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#SlientStudyRoom"/>
+        <RoomID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">005</RoomID>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <StudentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">456783</StudentID>
+        <firstName>Antone</firstName>
+        <lastName>Arnold</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <StudentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">532042</StudentID>
+        <firstName>Amy</firstName>
+        <lastName>Zhu</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <StudentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">534495</StudentID>
+        <firstName>Roy</firstName>
+        <lastName>Xing</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <StudentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">542095</StudentID>
+        <firstName>Echo</firstName>
+        <lastName>Arriaga</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <StudentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">293846</StudentID>
+        <firstName>Maggie</firstName>
+        <lastName>Zeng</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student06 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student06">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Student"/>
+        <StudentID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">439845</StudentID>
+        <firstName>Ash</firstName>
+        <lastName>Armijo</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff01 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff01">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+        <StuffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">12345</StuffID>
+        <firstName>Obama</firstName>
+        <lastName>Barack</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff02 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff02">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+        <StuffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23333</StuffID>
+        <firstName>Hillary</firstName>
+        <lastName>Clinton</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff03 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff03">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+        <StuffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">32123</StuffID>
+        <firstName>Trump</firstName>
+        <lastName>Donald</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff04 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff04">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+        <StuffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">23456</StuffID>
+        <firstName>David</firstName>
+        <lastName>Cameron</lastName>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff05 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff05">
+        <rdf:type rdf:resource="http://www.semanticweb.org/amyzhu/ontologies/2016/10/UniversityLibrary.owl#Stuff"/>
+        <StuffID rdf:datatype="http://www.w3.org/2001/XMLSchema#integer">76543</StuffID>
+        <firstName>Lily</firstName>
+        <lastName>Acker</lastName>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.2.6.20160910-2108) https://github.com/owlcs/owlapi -->
+
